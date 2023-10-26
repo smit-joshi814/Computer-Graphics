@@ -1,0 +1,46 @@
+/*Computer Graphics P18: Write a menu driven Graphic program  
+ * which combine translation, pivot-point rotation, and fixed-point rotation.
+ */
+package javaApps;
+import java.io.*;
+
+public class pra17MenuDrivenMain{
+
+    public static void main(String[] args) throws IOException {
+ 
+        int choice = 0;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        new pra17MenuDrivenMain();
+        
+        do{
+            System.out.println("******Menu*****");
+            System.out.println("1. Tanslate Polygon");
+            System.out.println("2. Rotate Polygon");
+            System.out.println("3. Scale Polygon");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice : ");
+            choice = Integer.parseInt(br.readLine());
+           
+            switch(choice){
+            
+            case 1: //Translation1
+                
+                new pra12TransPolygonMain();
+                break;
+            case 2:
+                 new pra13RotatePolygonMain();
+                 break;
+            case 3: //Rotation
+                new pra14ScalePolygonMain();
+                break;
+            
+            case 4: //Exit
+                break;
+            
+            default:
+                System.out.println("Wrong Choice");                
+        }
+        }while(choice != 4);
+    }
+}
